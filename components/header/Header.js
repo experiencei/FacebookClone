@@ -42,6 +42,10 @@ function Header() {
             <div  className="flex items-center sm:space-x-2 justify-end">
                 {/* <Image/> */}
                 <p className="whitespace-nowrap font-semibold pr-3">Experience</p>
+                 <ViewGridIcon className="icon"/>
+                 <ChatIcon className="icon"/>
+                 <BellIcon className="icon"/>
+                 <ChevronDownIcon className="icon"/>
             </div>
 
         </div>
