@@ -13,6 +13,12 @@ function Header() {
                     layout="fixed"
                 />
             </div>
+            <div>
+                <input
+                    type="text"
+                    placeholder="Search facebook"
+                />
+            </div>
         </div>
     )
 }
