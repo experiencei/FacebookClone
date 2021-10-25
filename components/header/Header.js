@@ -9,7 +9,7 @@ import HeaderIcon from "../headerIcon/HeaderIcon";
 
 function Header() {
     return (
-        <div>
+        <div  className="sticky top-0 z-50 bg-white flex items-center p-2 lg:px-5 shadow-md">
             
 
             <div className="flex items-center">
@@ -23,7 +23,7 @@ function Header() {
                  <SearchIcon  className="h-6 text-gray-600"/>
                  <input 
                     className="flex ml-2 items-center bg-transparent
-                    outline-none placeholder-gray-500"
+                    outline-none placeholder-gray-500 flex-shrink"
                     type="text"
                     placeholder="Search facebook"/>
             </div>
