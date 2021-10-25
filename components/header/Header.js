@@ -17,12 +17,13 @@ function Header() {
                     height={40}
                     layout="fixed"
                 />
-            </div>
-            <div className="flex">
-             <SearchIcon  className="h-6"/>
-            <input type="text"
+          <div className="flex ml-2 items-center rounded-full">
+                 <SearchIcon  className="h-6"/>
+                 <input type="text"
                     placeholder="Search facebook"/>
             </div>
+            </div>
+            
         </div>
     )
 }
