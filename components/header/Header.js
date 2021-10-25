@@ -27,6 +27,13 @@ function Header() {
             </div>
             </div>
             
+            <div  className="flex justify-center flex-grow">
+                <div className="">
+                       <HeaderIcon />
+                </div>
+            </div>
+
+
         </div>
     )
 }
