@@ -4,7 +4,9 @@ import {
 } from "@heroicons/react/solid";
 import {
     FlagIcon , PlayerIcon , SearchIcon , ShoppingCartIcon
-} from "@heroicons/react/outline"
+} from "@heroicons/react/outline";
+import HeaderIcon from "../headerIcon/HeaderIcon";
+
 function Header() {
     return (
         <div>
@@ -30,6 +32,10 @@ function Header() {
             <div  className="flex justify-center flex-grow">
                 <div className="">
                        <HeaderIcon Icon={HomeIcon}/>
+                       <HeaderIcon Icon={FlagIcon}/>
+                       <HeaderIcon Icon={PlayerIcon}/>
+                       <HeaderIcon Icon={ShoppingCartIcon}/>
+                       <HeaderIcon Icon={UserGroupIcon}/>
                 </div>
             </div>
 
