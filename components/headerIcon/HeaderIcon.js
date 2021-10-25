@@ -1,7 +1,7 @@
 function HeaderIcon({Icon}) {
     return (
-        <div>
-            <Icon  className="h-5"/>
+        <div className="cursor-pointer md:px-10 sm:h-14">
+            <Icon  className="h-5  "/>
         </div>
     )
 }
