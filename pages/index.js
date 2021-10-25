@@ -2,10 +2,11 @@ import { getSession } from 'next-auth/client';
 import Head from 'next/head'
 import Header from '../components/header/Header'
 import Login from '../components/login/Login';
+import Sidebar from '../components/sidebar/Sidebar';
 
 export default function Home({ session}) {
 
-  if(!session)  return <Login/>;
+  // if(!session)  return <Login/>;
   return (
     <div className="container">
       <Head>
@@ -16,7 +17,7 @@ export default function Home({ session}) {
 
       <Header/>
       <main>
-
+        <Sidebar/>
       </main>
     </div>
   );
