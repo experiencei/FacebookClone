@@ -32,21 +32,21 @@ function InputBox() {
 
 
           <div className="flex justify-evenly p-3 border-t">
-              <div>
+              <div className="inputIcon">
                 <VideoCameraIcon
                     className="h-7 text-red-500"
                 />
                 <p className="text-xs sm:text-sm xl:text-base">Live Video</p>
               </div>
 
-              <div>
+              <div className="inputIcon">
                  <CameraIcon
                      className="h-7 text-green-400"
                  />
                  <p className="text-xs sm:text-sm xl:text-base">Photo/Video</p>
               </div>
 
-              <div>
+              <div className="inputIcon">
                  <EmojiHappyIcon
                      className="h-7 text-yellow-300"
                  />
