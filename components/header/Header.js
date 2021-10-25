@@ -3,7 +3,7 @@ import {
     BellIcon , ChatIcon , ChevronDownIcon , HomeIcon , UserGroupIcon , ViewGridIcon
 } from "@heroicons/react/solid";
 import {
-    FlagIcon , PlayerIcon , SearchIcon , ShoppingCartIcon
+    FlagIcon , PlayIcon , SearchIcon , ShoppingCartIcon
 } from "@heroicons/react/outline";
 import HeaderIcon from "../headerIcon/HeaderIcon";
 
@@ -33,7 +33,7 @@ function Header() {
                 <div className="">
                        <HeaderIcon Icon={HomeIcon}/>
                        <HeaderIcon Icon={FlagIcon}/>
-                       <HeaderIcon Icon={PlayerIcon}/>
+                       <HeaderIcon Icon={PlayIcon}/>
                        <HeaderIcon Icon={ShoppingCartIcon}/>
                        <HeaderIcon Icon={UserGroupIcon}/>
                 </div>
