@@ -1,5 +1,6 @@
 import { getSession } from 'next-auth/client';
 import Head from 'next/head'
+import Feed from '../components/feed/Feed';
 import Header from '../components/header/Header'
 import Login from '../components/login/Login';
 import Sidebar from '../components/sidebar/Sidebar';
