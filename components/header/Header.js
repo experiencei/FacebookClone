@@ -6,9 +6,11 @@ import {
     FlagIcon , PlayIcon , SearchIcon , ShoppingCartIcon
 } from "@heroicons/react/outline";
 import HeaderIcon from "../headerIcon/HeaderIcon";
-import { signOut } from "next-auth/client";
+import { signOut, useSession } from "next-auth/client";
 
 function Header() {
+   const session = useSession();
+
     return (
         <div  className="sticky top-0 z-50 bg-white flex items-center p-2 lg:px-5 shadow-md">
             
