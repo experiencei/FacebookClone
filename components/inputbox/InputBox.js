@@ -29,6 +29,22 @@ function InputBox() {
                     <button type="submit" hidden onClick={sendPost}>Submit</button>
               </form>
           </div>
+
+
+          <div>
+              <div>
+              
+              </div>
+
+              <div>
+              
+              </div>
+
+              <div>
+              
+              </div>
+              
+          </div>
         </div>
     )
 }
