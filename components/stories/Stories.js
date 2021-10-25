@@ -1,3 +1,4 @@
+import StoryCard from "../storycard/StoryCard"
 
 const stories = [
     { name: 'sonny Iq',
