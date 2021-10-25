@@ -6,7 +6,7 @@ import Sidebar from '../components/sidebar/Sidebar';
 
 export default function Home({ session}) {
 
-  // if(!session)  return <Login/>;
+  if(!session)  return <Login/>;
   return (
     <div className="container">
       <Head>
@@ -16,7 +16,7 @@ export default function Home({ session}) {
       </Head>
 
       <Header/>
-      <main>
+      <main className="flex">
         <Sidebar/>
       </main>
     </div>
