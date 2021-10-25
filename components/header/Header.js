@@ -14,10 +14,9 @@ function Header() {
                 />
             </div>
             <div>
-                <input
-                    type="text"
-                    placeholder="Search facebook"
-                />
+         
+            <input type="text"
+                    placeholder="Search facebook"/>
             </div>
         </div>
     )
