@@ -1,7 +1,15 @@
 import { useSession } from "next-auth/client";
 import Image from "next/image";
+import { CameraIcon , VideoCameraIcon} from "@heroicons/react/solid"
+import { EmojiHappyIcon} from "@heroicons/react/outline"
 function InputBox() {
     const[ session] = useSession();
+
+
+    const sendPost = e => {
+        e.preventDefault();
+
+    }
     return ( 
         <div className="bg-white p-2 rounded-2xl shadow-md text-gray-500 font-medium mt-6">
           <div className="flex space-x-4 p-4 items-center">
@@ -18,7 +26,7 @@ function InputBox() {
                         type="text"
                         placeholder={`What's on your mind ${session.user.name}`}
                     />
-                    <button  hidden onClick={sendPost}></button>
+                    <button type="submit" hidden onClick={sendPost}>Submit</button>
               </form>
           </div>
         </div>
