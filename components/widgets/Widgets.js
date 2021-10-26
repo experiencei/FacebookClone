@@ -28,7 +28,7 @@ const contacts = [
 
 function Widgets() {
     return (
-        <div>
+        <div className="hidden lg:flex flex-col w-60 p-2 mt-5">
               <div className="flex justify-between items-center text-gray-500 mb-5">
                   <h2 className="text-xl">Contacts</h2>
                   <div className="flex space-x-2">
@@ -37,6 +37,14 @@ function Widgets() {
                       <DotsHorizontalIcon className="h-6"/>
                   </div>
               </div>
+
+              {contacts.map( contact => (
+                  <Contact
+                      key={contact.src}
+                      src={contact.src}
+                      name={contact.name}
+                  />
+              ))}
         </div>
     )
 }
