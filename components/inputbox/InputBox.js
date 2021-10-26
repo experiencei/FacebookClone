@@ -32,6 +32,10 @@ function InputBox() {
        reader.onload = (readerEvent ) => {
           setImageToPost(readerEvent.target.result)
        }
+    };
+
+    const removeImage = () => {
+        setImageToPost(null);
     }
     return ( 
         <div className="bg-white p-2 rounded-2xl shadow-md text-gray-500 font-medium mt-6">
@@ -52,6 +56,17 @@ function InputBox() {
                     />
                     <button type="submit" hidden onClick={sendPost}>Submit</button>
               </form>
+
+              {imageToPost  && (
+                  <div  onClick={removeImage}  className="flex flex-col filter hover:brightness-110 transition duration-150 transform hover:scale-105 cursor-pointer">
+                      <img
+                        className="h-10 object-contain"
+                          src={imageToPost}
+                           alt="images"
+                      />
+                      <p className="text-xs text-red-500 text-center">Remove </p>
+                  </div>
+              )}
           </div>
 
 
