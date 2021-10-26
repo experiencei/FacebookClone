@@ -13,7 +13,16 @@ const firebaseConfig = {
 };
 
 
-const app = !firebase.apps.length ?  initializeApp(firebaseConfig) : firebase.app();
-
-export const db = firebase.firestore();
+const app = !firebase.apps.length ?  firebase.initializeApp(firebaseConfig) : firebase.app();
 export const storage = firebase.storage();
+export const db = firebase.firestore();
+
+
+
+
+
+
+
+
+
+
