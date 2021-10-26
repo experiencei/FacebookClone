@@ -3,11 +3,13 @@ import Image from "next/image";
 import firebase from 'firebase/compat/app';
 import { CameraIcon , VideoCameraIcon} from "@heroicons/react/solid"
 import { EmojiHappyIcon} from "@heroicons/react/outline"
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { db } from "../firebase/firebase";
 function InputBox() {
     const[ session] = useSession();
     const inputRef = useRef(null)
+    const filePicker = useRef(null);
+    const [imageToPost , setImageToPost] = useState(null)
 
     const sendPost = e => {
         e.preventDefault();
@@ -23,7 +25,8 @@ function InputBox() {
          inputRef.current.value = ""
     }
     const addImageToPost = (e) => {
-
+       e.preventDefault();
+       setImageToPost
     }
     return ( 
         <div className="bg-white p-2 rounded-2xl shadow-md text-gray-500 font-medium mt-6">
@@ -55,12 +58,12 @@ function InputBox() {
                 <p className="text-xs sm:text-sm xl:text-base">Live Video</p>
               </div>
 
-              <div className="inputIcon">
+              <div onClick={() => filePicker.current.click()} className="inputIcon">
                  <CameraIcon
                      className="h-7 text-green-400"
                  />
                  <p className="text-xs sm:text-sm xl:text-base">Photo/Video</p>
-                 <input type="file" hidden onChange={addImageToPost}/>
+                 <input ref={filePicker} type="file" hidden onChange={addImageToPost}/>
               </div>
 
               <div className="inputIcon">
