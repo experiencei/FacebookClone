@@ -28,6 +28,21 @@ function Post({name , message, email , timestamp , image , postImage }) {
                     layout="fixed"
                 />
             </div>)}
+
+
+            <div className="flex justify-between items-center">
+                <div>
+                    
+                </div>
+
+                <div>
+
+                </div>
+
+                <div>
+
+                </div>
+            </div>
         </div>
     )
 }
