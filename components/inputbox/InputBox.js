@@ -4,7 +4,7 @@ import firebase from 'firebase/compat/app';
 import { CameraIcon , VideoCameraIcon} from "@heroicons/react/solid"
 import { EmojiHappyIcon} from "@heroicons/react/outline"
 import { useRef, useState } from "react";
-import { db } from "../firebase/firebase";
+import { db, storage } from "../firebase/firebase";
 function InputBox() {
     const[ session] = useSession();
     const inputRef = useRef(null)
@@ -21,6 +21,10 @@ function InputBox() {
              email : session.user.email,
              image : session.user.image,
              timestamp : firebase.firestore.FieldValue.serverTimestamp()
+         }).then(  doc => {
+             if (imageToPost) {
+                 const uploadTask = storage.ref(``)
+             }
          })
          inputRef.current.value = ""
     }
