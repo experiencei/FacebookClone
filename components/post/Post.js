@@ -18,6 +18,8 @@ function Post({name , message, email , timestamp , image , postImage }) {
                         </p>
                   </div>
                  </div>
+
+                 <p className="pt-4">{message}</p>
             </div>
         </div>
     )
