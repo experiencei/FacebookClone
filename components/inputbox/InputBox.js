@@ -25,8 +25,13 @@ function InputBox() {
          inputRef.current.value = ""
     }
     const addImageToPost = (e) => {
-       e.preventDefault();
-       setImageToPost
+    const reader = new FileReader();
+     if ( e. target.files[0]) {
+          reader.readAsDataURL(e.target.files[0]);
+     }
+       reader.onload = (readerEvent ) => {
+          setImageToPost(readerEvent.target.result)
+       }
     }
     return ( 
         <div className="bg-white p-2 rounded-2xl shadow-md text-gray-500 font-medium mt-6">
