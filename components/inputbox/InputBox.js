@@ -28,7 +28,11 @@ function InputBox() {
                  removeImage();
 
                  uploadTask.on("state_change" , null , error => console.error(error), () => {
-                     
+                     storage.ref("posts").child(doc.id).getDownloadURL().then(url => {
+                         db.collection("posts").doc(doc.id).set({
+                             postImage: url
+                         } , { merge : true})
+                     })
                  })
              }
          })
