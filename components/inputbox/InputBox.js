@@ -20,6 +20,10 @@ function InputBox() {
              image : session.user.image,
              timestamp : firebase.firestore.FieldValue.serverTimestamp()
          })
+         inputRef.current.value = ""
+    }
+    const addImageToPost = () => {
+        
     }
     return ( 
         <div className="bg-white p-2 rounded-2xl shadow-md text-gray-500 font-medium mt-6">
@@ -56,6 +60,7 @@ function InputBox() {
                      className="h-7 text-green-400"
                  />
                  <p className="text-xs sm:text-sm xl:text-base">Photo/Video</p>
+                 <input type="file" hidden onChange={addImageToPost}/>
               </div>
 
               <div className="inputIcon">
