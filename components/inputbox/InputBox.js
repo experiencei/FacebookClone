@@ -23,7 +23,13 @@ function InputBox() {
              timestamp : firebase.firestore.FieldValue.serverTimestamp()
          }).then(  doc => {
              if (imageToPost) {
-                 const uploadTask = storage.ref(`posts/${doc.id}`).putString(imageToPost)
+                 const uploadTask = storage.ref(`posts/${doc.id}`).putString(imageToPost , "data_url")
+
+                 removeImage();
+
+                 uploadTask.on("state_change" , null , error => console.error(error), () => {
+                     
+                 })
              }
          })
          inputRef.current.value = ""
