@@ -22,8 +22,8 @@ function InputBox() {
          })
          inputRef.current.value = ""
     }
-    const addImageToPost = () => {
-        
+    const addImageToPost = (e) => {
+
     }
     return ( 
         <div className="bg-white p-2 rounded-2xl shadow-md text-gray-500 font-medium mt-6">
