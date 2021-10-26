@@ -8,6 +8,7 @@ function Feed() {
                 <Stories/>
             </div>
             <InputBox/>
+            <Posts/>
         </div>
     )
 }
