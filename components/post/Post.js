@@ -1,8 +1,24 @@
 
 function Post({name , message, email , timestamp , image , postImage }) {
     return (
-        <div>
-            
+        <div className="flex flex-col">
+            <div>
+                 <div>
+                        <img
+                        src={image}
+                        className="rounded-full"
+                        width={40}
+                        height={40}
+                        alt="post"
+                       />
+                  <div>
+                 <p>{name}</p>
+                        <p className="text-x5 text-gray-400">
+                           {new Date(timestamp?.toDate()).toLocaleString()}
+                        </p>
+                  </div>
+                 </div>
+            </div>
         </div>
     )
 }
