@@ -1,4 +1,4 @@
-
+import Image from "next/image";
 function Post({name , message, email , timestamp , image , postImage }) {
     return (
         <div className="flex flex-col">
@@ -21,6 +21,13 @@ function Post({name , message, email , timestamp , image , postImage }) {
 
                  <p className="pt-4">{message}</p>
             </div>
+            { postImage && (<div className="relative h-56 md:h-95 bg-white">
+                <Image
+                    src={postImage}
+                    objectFit="cover"
+                    layout="fixed"
+                />
+            </div>)}
         </div>
     )
 }
