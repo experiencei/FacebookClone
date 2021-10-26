@@ -1,5 +1,6 @@
 import { SearchIcon } from "@heroicons/react/outline"
 import { DotsHorizontalIcon , VideoCameraIcon } from "@heroicons/react/solid"
+import Contact from "../contact/Contact"
 
 
 const contacts = [
