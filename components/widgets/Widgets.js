@@ -29,7 +29,7 @@ const contacts = [
 function Widgets() {
     return (
         <div>
-              <div className="flex">
+              <div className="flex justify-between items-center text-gray-500 mb-5">
                   <h2 className="text-xl">Contacts</h2>
                   <div className="flex space-x-2">
                       <VideoCameraIcon className="h-6"/>
