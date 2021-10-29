@@ -1,9 +1,9 @@
-import  { useCollections } from "react-firebase-hooks/firestore"
+import  { useCollection } from "react-firebase-hooks/firestore"
 import { db } from "../firebase/firebase"
 import Post from "../post/Post"
 
 function Posts( { posts }) {
-     const [ realtimePosts , loading , error] = useCollections(
+     const [ realtimePosts , loading , error] = useCollection(
        db.collection("posts").orderBy("timestamp" , "desc")
      )
 
@@ -16,8 +16,8 @@ function Posts( { posts }) {
                 message={post.data().message}
                 email={post.data().email}
                 timestamp={post.data().timestamp}
-                image={post.data().image}
-                postImage={post.data().postImage}
+                image={post?.data()?.image}
+                postImage={post?.data()?.postImage}
             />) : (
                 posts.map((post) => (<Post
                  key={post.id}
@@ -25,8 +25,8 @@ function Posts( { posts }) {
                 message={post.data().message}
                 email={post.data().email}
                 timestamp={post.data().timestamp}
-                image={post.data().image}
-                postImage={post.data().postImage}
+                image={post?.data()?.image}
+                postImage={post?.data()?.postImage}
             />))
             )}
         </div>

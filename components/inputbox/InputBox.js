@@ -6,7 +6,7 @@ import { EmojiHappyIcon} from "@heroicons/react/outline"
 import { useRef, useState } from "react";
 import { db, storage } from "../firebase/firebase";
 function InputBox() {
-    const[ session] = useSession();
+    const [ session] = useSession();
     const inputRef = useRef(null)
     const filePicker = useRef(null);
     const [imageToPost , setImageToPost] = useState(null)
@@ -56,7 +56,7 @@ function InputBox() {
           <div className="flex space-x-4 p-4 items-center">
               <Image
                   className="rounded-full"
-                  src={session.user.image}
+                  src={session?.user?.image}
                   width={40}
                   height={40}
                   layout="fixed"
@@ -66,7 +66,7 @@ function InputBox() {
                         className="rounded-full h-12 bg-gray-100 flex-grow px-5 focus:outline-none"
                         type="text"
                         ref={inputRef}
-                        placeholder={`What's on your mind ${session.user.name}`}
+                        placeholder={`What's on your mind, ${session.user.name}`}
                     />
                     <button type="submit" hidden onClick={sendPost}>Submit</button>
               </form>

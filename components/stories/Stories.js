@@ -2,8 +2,8 @@ import StoryCard from "../storycard/StoryCard"
 
 const stories = [
     { name: 'sonny Iq',
-      src: "https://links.papareact.com/zof",
-      profile : "https://links.papareact.com/l4v"
+      src: "https://media-exp1.licdn.com/dms/image/C5603AQGWMnHFBvSNHQ/profile-displayphoto-shrink_200_200/0/1585517035347?e=1640822400&v=beta&t=0pAPShxwq2tNqK5WpzsA16P-1pPMh4OPRCT-ghN_mAU",
+      profile : "https://media-exp1.licdn.com/dms/image/C5603AQGWMnHFBvSNHQ/profile-displayphoto-shrink_200_200/0/1585517035347?e=1640822400&v=beta&t=0pAPShxwq2tNqK5WpzsA16P-1pPMh4OPRCT-ghN_mAU"
    },
     { name: 'Elon Musk',
       src: "https://links.papareact.com/4zn",
